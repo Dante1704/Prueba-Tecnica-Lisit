@@ -1,6 +1,7 @@
 # Prueba técnica Lisit
 
-- Instrucciones para levantar la solución en ambiente local: 
+- Instrucciones para levantar la solución en ambiente local
+- Para las siguientes instrucciones se asume que el usuario previamente tiene instalado Node.js, el gestor de paquetes NPM, un editor de código, y GIT. 
 
 1- Abri una terminal local y clonar el siguiente repositorio e inicializarlo : https://github.com/Dante1704/Prueba-Tecnica-Lisit.git 
 
