@@ -19,8 +19,10 @@ export const Home = () => {
   }, [])
 
   return (
-    <p className='text-3xl font-bold underline'>
-      Hello world!
-    </p>
+    <div className='grid grid-flow-col overflow-x-auto gap-5 pb-4 lg:pb-0  '>
+      <div className="w-[320px] h-[568px] bg-red-500">320×568</div>
+      <div className="w-[320px] h-[568px] bg-red-500">320×568</div>
+      <div className="w-[320px] h-[568px] bg-red-500">320×568</div>
+    </div >
   )
 }

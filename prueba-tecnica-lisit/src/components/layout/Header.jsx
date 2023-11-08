@@ -5,7 +5,7 @@ import { Search } from './Search'
 export const Header = () => {
 
     return (
-        <header>
+        <header className='flex-none'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
