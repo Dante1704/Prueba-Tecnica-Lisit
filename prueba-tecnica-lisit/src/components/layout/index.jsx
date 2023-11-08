@@ -8,7 +8,7 @@ export const Layout = ({ children }) => {
   return (
     <div className='min-h-screen flex flex-col'>
       <Header />
-      <main style={{}} className='flex flex-row justify-center items-center grow'>
+      <main style={{}} className='flex flex-row justify-center items-center grow image'>
         {children}
         <Outlet />
       </main>

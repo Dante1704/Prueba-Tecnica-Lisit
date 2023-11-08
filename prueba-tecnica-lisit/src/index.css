@@ -59,3 +59,11 @@ main {
   filter: invert(1);
   transform: scale(1.25)
 }
+
+.image {
+  background-image: url("./assets/star-wars-logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+}
