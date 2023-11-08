@@ -1,8 +1,11 @@
-# React + Vite
+# Prueba técnica Lisit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Instrucciones para levantar la solución en ambiente local: 
 
-Currently, two official plugins are available:
+1- Abri una terminal local y clonar el siguiente repositorio e inicializarlo : https://github.com/Dante1704/Prueba-Tecnica-Lisit.git 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2- Abrir el proyecto con algun editor de código, preferentemente Visual Studio Code
+
+3- Con lineas de comandos en la terminal, situarse en la carpeta raiz del proyecto y ejecutar el comando npm install
+
+4-Finalmente, ejecutar el comando npm run dev para levantar el proyecto en ambiente local. Vite, proveerá en la por consola el link del proyecto para visualizarlo en el navegador
