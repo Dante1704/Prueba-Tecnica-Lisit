@@ -8,7 +8,7 @@ export const Layout = ({ children }) => {
   return (
     <div className='min-h-screen flex flex-col'>
       <Header />
-      <main className='grow'>
+      <main style={{ margin: '0 auto' }} className='grow max-w-[1440px]'>
         {children}
         <Outlet />
       </main>
