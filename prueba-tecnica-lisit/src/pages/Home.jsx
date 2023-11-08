@@ -4,6 +4,7 @@ import { InfoPreliminarPersonas } from '../components/infoPreliminar/InfoPrelimi
 import { InfoPreliminarPlanetas } from '../components/infoPreliminar/InfoPreliminarPlanetas'
 import { InfoPreliminarNaves } from '../components/infoPreliminar/InfoPreliminarNaves'
 import '../index.css'
+import { Loading } from '../components/Loading'
 
 export const Home = () => {
 
@@ -27,27 +28,27 @@ export const Home = () => {
     <div className='grid grid-flow-col overflow-x-auto gap-5 pb-4 lg:pb-0'>
       <div className="w-[280px] h-[568px] bg-base-100 opacity-90 p-4 text-white">
         <h2 className='text-center text-xl'>PERSONAS</h2>
-        {resources.personas && (
-
+        {resources.personas ? (
           <InfoPreliminarPersonas personas={resources.personas.slice(0, 3)} />
-
-        )}
+        ) :
+          <Loading />
+        }
       </div>
       <div className="w-[280px] h-[568px] bg-base-100 opacity-90 p-4">
         <h2 className='text-center text-xl'>PLANETAS</h2>
-        {resources.planetas && (
-
+        {resources.planetas ? (
           <InfoPreliminarPlanetas planetas={resources.planetas.slice(0, 3)} />
-
-        )}
+        ) :
+          <Loading />
+        }
       </div>
       <div className="w-[280px] h-[568px] bg-base-100 opacity-90 p-4">
         <h2 className='text-center text-xl'>NAVES</h2>
-        {resources.naves && (
-
+        {resources.naves ? (
           <InfoPreliminarNaves naves={resources.naves.slice(0, 3)} />
-
-        )}
+        ) :
+          <Loading />
+        }
       </div>
     </div >
   )
