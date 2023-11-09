@@ -24,7 +24,7 @@ export const Home = () => {
   }, [])
 
   return (
-    <div className='grid grid-flow-col overflow-x-auto gap-5 pb-4 lg:pb-0'>
+    <div className='grid grid-flow-col overflow-x-auto gap-5 mb-4 lg:pb-0'>
       <section className="w-[280px] h-[568px] bg-base-100 opacity-90 p-4 text-white">
         <h2 className='text-center text-xl'>PERSONAS</h2>
         {allResources.personas ? (

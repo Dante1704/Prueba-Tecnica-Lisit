@@ -14,7 +14,6 @@ export const PersonaDetalle = ({ persona }) => {
             axios.get(persona.homeworld)
                 .then(response => setMundoNatal(response.data.name))
                 .catch(err => console.log(err))
-
         }
     }, [])
 
@@ -33,7 +32,6 @@ export const PersonaDetalle = ({ persona }) => {
                     setFilms(filmNames)
                 })
                 .catch(err => console.log(err))
-
         }
         if (persona.films) {
             getPersonaFilms(persona.films)
@@ -60,7 +58,7 @@ export const PersonaDetalle = ({ persona }) => {
                     films ?
                         (films.map((film) => {
                             return (
-                                <span>{film}</span>
+                                <span key={film}>{film}</span>
                             )
                         })) :
                         <Loading />

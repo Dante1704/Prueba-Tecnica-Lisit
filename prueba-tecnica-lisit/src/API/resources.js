@@ -26,3 +26,7 @@ export const getPersonasPaginadas = async (pagina) => {
     const response = await resources.get(`/people/?page=${pagina}`)
     return response
 }
+/* export const getPaginas = async (pagina, categoria) => {
+    const response = await resources.get(`/${categoria}/?page=${pagina}`)
+    return response
+} */
