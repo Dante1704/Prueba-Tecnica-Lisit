@@ -7,7 +7,7 @@ const resources = axios.create({
     }
 });
 
-const getResources = async () => {
+export const getAllResources = async () => {
 
     const personasPromise = resources.get('/people/');
     const planetasPromise = resources.get('/planets/');
@@ -22,4 +22,7 @@ const getResources = async () => {
     return response
 };
 
-export default getResources;
+export const getPersonasPaginadas = async (pagina) => {
+    const response = await resources.get(`/people/?page=${pagina}`)
+    return response
+}
