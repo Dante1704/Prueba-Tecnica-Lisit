@@ -11,7 +11,6 @@ export const Paginado = ({ paginaActual, paginaAnterior, paginaSiguiente, cambia
 
     const irAlSiguiente = () => {
         if (paginaSiguiente) {
-
             const nuevaPagina = paginaActual + 1
             cambiarPagina(nuevaPagina)
         }

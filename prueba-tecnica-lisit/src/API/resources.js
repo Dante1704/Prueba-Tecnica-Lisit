@@ -38,3 +38,8 @@ export const getPlanetasPaginados = async (pagina) => {
     const response = await resources.get(`/planets/?page=${pagina}`)
     return response
 }
+
+export const getElementoPorNombre = async (categoriaEnIngles, elemento) => {
+    const response = await resources.get(`/${categoriaEnIngles}/?search=${elemento}`)
+    return response
+}

@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { getNavesPaginadas } from '../API/resources'
 import { Loading } from '../components/Loading'
 import { Paginado } from '../components/Paginado'
 import { NaveDetalle } from '../components/categoriasDetalle/NaveDetalle'
+import { ElementosPorNombreContext } from '../context/elementosPorNombre'
 
 
 
@@ -10,6 +11,10 @@ export const Naves = () => {
 
     const [navesPaginadas, setNavesPaginadas] = useState({
     })
+
+    const { elementosPorNombre } = useContext(ElementosPorNombreContext)
+
+    const navesARenderizar = elementosPorNombre ?? navesPaginadas
 
     const [paginaActual, setPaginaActual] = useState(1)
 
@@ -26,11 +31,11 @@ export const Naves = () => {
     return (
         <section className='flex flex-col justify-center items-center gap-10'>
 
-            {navesPaginadas.results ?
+            {navesARenderizar.results ?
                 (<>
                     <div className='grid gap-10 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5'>
                         {
-                            navesPaginadas.results.map((nave) => {
+                            navesARenderizar.results.map((nave) => {
                                 return (
                                     <div className="w-[280px] h-[568px] bg-base-100 opacity-90 p-4 text-white" key={nave.name}>
                                         <NaveDetalle nave={nave} />
@@ -40,8 +45,8 @@ export const Naves = () => {
                     </div >
                     <Paginado
                         paginaActual={paginaActual}
-                        paginaAnterior={navesPaginadas.previous}
-                        paginaSiguiente={navesPaginadas.next}
+                        paginaAnterior={navesARenderizar.previous}
+                        paginaSiguiente={navesARenderizar.next}
                         cambiarPagina={cambiarPagina}
                     />
                 </>) :
