@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getPersonasPaginadas } from '../API/resources'
 import { Loading } from '../components/Loading'
-import { PersonaDetalle } from '../components/PersonaDetalle'
+import { PersonaDetalle } from '../components/categoriasDetalle/PersonaDetalle'
 import { Paginado } from '../components/Paginado'
 
 

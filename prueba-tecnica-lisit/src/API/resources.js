@@ -32,3 +32,9 @@ export const getNavesPaginadas = async (pagina) => {
     const response = await resources.get(`/starships/?page=${pagina}`)
     return response
 }
+
+
+export const getPlanetasPaginados = async (pagina) => {
+    const response = await resources.get(`/planets/?page=${pagina}`)
+    return response
+}

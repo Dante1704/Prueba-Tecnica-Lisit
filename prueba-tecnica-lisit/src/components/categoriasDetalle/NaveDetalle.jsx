@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Loading } from './Loading'
+import { Loading } from '../Loading'
 
 
-export const NavesDetalle = ({ nave }) => {
+export const NaveDetalle = ({ nave }) => {
 
 
     const [films, setFilms] = useState(null)

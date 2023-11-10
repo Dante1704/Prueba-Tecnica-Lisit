@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { getNavesPaginadas } from '../API/resources'
 import { Loading } from '../components/Loading'
 import { Paginado } from '../components/Paginado'
-import { NavesDetalle } from '../components/Naves'
+import { NaveDetalle } from '../components/categoriasDetalle/NaveDetalle'
 
 
 
@@ -33,7 +33,7 @@ export const Naves = () => {
                             navesPaginadas.results.map((nave) => {
                                 return (
                                     <div className="w-[280px] h-[568px] bg-base-100 opacity-90 p-4 text-white" key={nave.name}>
-                                        <NavesDetalle nave={nave} />
+                                        <NaveDetalle nave={nave} />
                                     </div>
                                 )
                             })}
